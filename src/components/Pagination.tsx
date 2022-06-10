@@ -1,23 +1,22 @@
 import React, { useState } from "react";
 
 import "./css/people.css";
-export const Pagination = ({ handlePageChanged }: any) => {
+type Props = {
+  handlePageChanged: (page: number) => void;
+  selectedPage: number;
+};
+export const Pagination = ({ handlePageChanged }: Props) => {
   const [clickedPage, setclickedPage] = useState(1);
   const count = 82;
   const pageItems = [];
 
   for (let page = 1; page < Math.round(count) / 9; page++) {
     pageItems.push(
-      <li
-        className={
-
-          clickedPage === page ? "page-item active" : "page-item"
-        }
-      >
+      <li className={clickedPage === page ? "page-item active" : "page-item"}>
         <a
           href="/"
           className="page-link"
-          onClick={(event: any) => {
+          onClick={(event: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
             setclickedPage(page);
             event.preventDefault();
             handlePageChanged(page);

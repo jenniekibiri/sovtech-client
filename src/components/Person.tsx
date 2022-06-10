@@ -2,6 +2,10 @@ import { Link } from "react-router-dom";
 import "./css/person.css";
 import { useQuery, gql } from "@apollo/client";
 import { useParams } from "react-router-dom";
+import { ErrorPage } from "./helpers/ErrorPage";
+import { Spinner } from "./helpers/Spinner";
+import { getCharacterId, imgUrl } from "./helpers/constants";
+import { film, person } from "./queries/type";
 
 const Person = () => {
   const params = useParams();
@@ -34,31 +38,12 @@ const Person = () => {
   }
     
   `;
-  const imgUrl = "https://starwars-visualguide.com/assets/img/characters/";
-  const getCharacterId = (url: string) => {
-    const arr = url.split("/");
 
-    return arr[arr.length - 2];
-  };
   const { loading, error, data } = useQuery(PERSON_QUERY);
-  if (loading)
-    return (
-      <div className="spinner">
-        <div className="spinner-grow text-primary" role="status"></div>
-        <div className="sr-only  text-white">
-          <span>Loading please wait </span>
-        </div>
-      </div>
-    );
-  if (error)
-    return (
-      <div className="text-white error">
-        <span> Something went wrong :( </span>
-        <span className="text-muted">Please try again</span>
-      </div>
-    );
-  let person = data.person;
- 
+  if (loading) return <Spinner />;
+  if (error) return <ErrorPage />;
+  let person:person = data.person;
+
   return (
     <div className="container">
       <div className="person">
@@ -116,7 +101,7 @@ const Person = () => {
             <small>Appeared in {person.films.length} films</small>
           </h2>
           <div className="person-film-list">
-            {person.films.map((film: any) => (
+            {person.films.map((film: film) => (
               <div className="person-film-card">
                 <div>
                   <div className="person-film-date">{film.release_date}</div>
