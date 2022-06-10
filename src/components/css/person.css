@@ -5,7 +5,7 @@
 }
 .back-link {
     text-decoration: none;
-    color: #3699FF;
+    color: #3699ff;
     font-size: 1.25rem;
 }
 .person-profile {
@@ -21,13 +21,13 @@
 }
 .person-name {
     font-size: 1.3rem;
-    color: #FFF;
+    color: #fff;
     margin-bottom: 0.5rem;
 }
 .person-homeworld {
     font-size: 1.25rem;
     font-weight: 600;
-    color: #8950FC;
+    color: #8950fc;
     margin: 0 0 2rem;
 }
 .person-desc p {
@@ -43,7 +43,7 @@
 .person-desc b {
     font-size: 1rem;
     font-weight: 500;
-    color: #CDCDDE;
+    color: #cdcdde;
 }
 .person-films > h2 {
     display: flex;
@@ -52,12 +52,12 @@
 }
 .person-films > h2 b {
     font-size: 2rem;
-    color: #CDCDDE;
+    color: #cdcdde;
 }
 .person-films > h2 small {
     font-size: 0.9rem;
     font-weight: 600;
-    color: #6D6D80;
+    color: #6d6d80;
 }
 .person-film-list {
     display: grid;
@@ -70,8 +70,8 @@
     flex-direction: column;
     justify-content: space-around;
     padding: 2rem;
-    border: 1px solid #2B2B40;
-    background-color: #1E1E2D;
+    border: 1px solid #2b2b40;
+    background-color: #1e1e2d;
     border-radius: 0.95rem;
     text-decoration: none;
 }
@@ -81,7 +81,7 @@
     line-height: 1;
     display: inline-flex;
     align-items: center;
-    color: #CDCDDE;
+    color: #cdcdde;
     background-color: #323248;
     padding: 0.325rem 0.5rem;
     border-radius: 0.475rem;
@@ -89,13 +89,14 @@
 .person-film-title {
     font-size: 1.05rem;
     font-weight: 500;
-    color: #CDCDDE;
+    color: #cdcdde;
     margin: 1.25rem 0 0.5rem 0;
 }
-.person-film-director, .person-film-producer  {
+.person-film-director,
+.person-film-producer {
     font-size: 0.8rem;
     font-weight: 400;
-    color: #6D6D80;
+    color: #6d6d80;
     margin: 0;
 }
 .person-opening-crawl {
@@ -103,11 +104,9 @@
     font-weight: 400;
     color: white;
     margin: 0;
-
 }
 .person-opening-crawl-title {
     font-size: 0.8rem;
     font-weight: 400;
-    color: #CDCDDE;
-   
+    color: #cdcdde;
 }
