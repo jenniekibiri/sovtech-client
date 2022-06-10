@@ -7,11 +7,46 @@
     text-decoration: none;
     color: #3699ff;
     font-size: 1.25rem;
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width: 768px) {
+    .back-link {
+        font-size: 0.8rem !important;
+        width: 100% !important;
+        flex-direction: row;
+    }
+}
+.person {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+@media (max-width: 768px) {
+    .person {
+        flex-direction: column;
+    }
+}
+@media (max-width: 768px) {
+    .sidebar-header {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+    }
 }
 .person-profile {
     width: calc(30% - 3rem);
     float: left;
     padding: 0 3rem 0 0;
+}
+@media (max-width: 768px) {
+    .person-profile {
+        width: 100%;
+        padding: 0;
+        float: none;
+        align-items: center;
+    }
 }
 .person-image {
     width: 200px;
@@ -19,10 +54,19 @@
     border-radius: 50%;
     border: 10px solid rgba(50, 50, 72);
 }
+
 .person-name {
     font-size: 1.3rem;
     color: #fff;
     margin-bottom: 0.5rem;
+}
+@media (max-width: 768px) {
+    .person-name {
+        font-size: 1.2rem;
+        display: flex !important;
+        padding-top: 1rem !important;
+        justify-content: center !important;
+    }
 }
 .person-homeworld {
     font-size: 1.25rem;
@@ -30,6 +74,15 @@
     color: #8950fc;
     margin: 0 0 2rem;
 }
+
+@media (max-width: 768px) {
+    .person-homeworld {
+        font-size: 1.0rem;
+        display: flex !important;
+        justify-content: center !important;
+    }
+}
+
 .person-desc p {
     display: flex;
     justify-content: space-between;
@@ -54,10 +107,21 @@
     font-size: 2rem;
     color: #cdcdde;
 }
+@media (max-width: 768px) {
+    .person-films > h2 b {
+        font-size: 1.5rem;
+    }
+}
 .person-films > h2 small {
     font-size: 0.9rem;
     font-weight: 600;
     color: #6d6d80;
+}
+@media (max-width: 768px) {
+    .person-films > h2 small {
+        font-size: 0.7rem;
+        padding-top: 0.5rem;
+    }
 }
 .person-film-list {
     display: grid;

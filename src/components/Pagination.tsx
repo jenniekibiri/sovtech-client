@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 import "./css/people.css";
 type Props = {
+    // eslint-disable-next-line no-unused-vars
     handlePageChanged: (page: number) => void;
     selectedPage: number;
 };

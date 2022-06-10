@@ -48,16 +48,18 @@ const Person = () => {
         <div className="container">
             <div className="person">
                 <div className="person-profile">
-                    <h4>
-                        <Link to="/" className="back-link">
-                            &lt; Back home
-                        </Link>
-                    </h4>
+           <div className="sidebar-header">
+           <Link to="/" className="back-link">
+                        <span className="back-link-icon">&lt;</span>
+                        <span className="back-link-text"> Back</span>
+                    </Link>
+
                     <img
                         src={`${imgUrl}${getCharacterId(person.url)}.jpg`}
                         alt="Luke Skywalker"
                         className="person-image"
                     />
+           </div>
                     <div className="person-details">
                         <h6 className="person-name">{person.name}</h6>
                         <h4 className="person-homeworld">{person.planet}</h4>
